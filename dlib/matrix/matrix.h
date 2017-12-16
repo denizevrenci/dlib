@@ -1171,7 +1171,6 @@ namespace dlib
         }
 #endif // DLIB_HAS_INITIALIZER_LISTS
 
-#ifdef DLIB_HAS_RVALUE_REFERENCES
         matrix(matrix&& item)
         {
         #ifdef MATLAB_MEX_FILE
@@ -1212,7 +1211,6 @@ namespace dlib
         #endif
             return *this;
         }
-#endif // DLIB_HAS_RVALUE_REFERENCES
 
         template <typename U, size_t len>
         explicit matrix (

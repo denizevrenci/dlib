@@ -163,7 +163,6 @@ namespace dlib
         array2d(const array2d&) = delete;        // copy constructor
         array2d& operator=(const array2d&) = delete;    // assignment operator
 
-#ifdef DLIB_HAS_RVALUE_REFERENCES
         array2d(array2d&& item) : array2d()
         {
             swap(item);
@@ -176,7 +175,6 @@ namespace dlib
             swap(rhs);
             return *this;
         }
-#endif
 
         virtual ~array2d (
         ) { clear(); }
